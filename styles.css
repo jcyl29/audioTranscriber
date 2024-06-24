@@ -1,0 +1,141 @@
+/*
+ In this URL, wght@400;600;700 specifies that you want to import the normal (400),
+ semibold (600), and bold (700) weights of the Cairo font.
+ The display=swap part tells the browser to use the
+ fallback font until the Cairo font is loaded.
+*/
+@import url(https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap);
+
+
+:root {
+    --blue: #0072FF;
+    --green: #00BB7C;
+    --grey: #BBBBBB;
+    --muted: 75%;
+}
+
+@font-face {
+    font-family: 'Cairo';
+}
+
+* {
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 3vmax;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: 600;
+}
+
+.truncate {
+    max-width: 25vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dialog {
+    padding: 2rem;
+
+    &::backdrop {
+        background: var(--grey);
+        opacity: 0.75;
+    }
+}
+
+.gray-text {
+    color: var(--grey);
+}
+
+.header {
+    text-align: center;
+}
+
+.label {
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.button {
+    text-transform: uppercase;
+    border: none;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    /*
+    why have to add cursor manually:
+    https://ux.stackexchange.com/questions/105024/why-dont-button-html-elements-have-a-css-cursor-pointer-by-default
+    */
+}
+
+.button:hover {
+    opacity: var(--muted)
+}
+
+.button-primary {
+    background: var(--green);
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+.box {
+    display: flex;
+    margin: 1rem 0;
+
+    &.flex-end {
+        justify-content: flex-end;
+    }
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+
+    .thead {
+        border-bottom: solid 1px black;
+    }
+
+    tr:not(:first-child) {
+        border-top: solid 1px var(--grey);
+    }
+
+    .table-header {
+        text-transform: uppercase;
+        text-align: left;
+    }
+}
+
+.transcript-viewer {
+    margin-top: 5rem;
+}
+
+.textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.live-transcript-row {
+    display: flex;
+    justify-content: space-between;
+    column-gap: .5rem;
+}
+
+.copy-row-button {
+    user-select: none;
+    min-width: 4rem;
+
+}
+
+
+
+
+
