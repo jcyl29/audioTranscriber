@@ -7,3 +7,6 @@ Transcribes both prerecorded audio and live audio
 * Set up localhost with [Simple Web Server](https://simplewebserver.org/)
 * go to the localhost url provided from above
 * Paste deepgram API key
+
+## live link
+https://jcyl29.github.io/audioTranscriber/
